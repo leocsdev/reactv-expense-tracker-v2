@@ -1,13 +1,17 @@
+import ExpenseInfo from './ExpenseInfo';
+
 function Header() {
   const style = {
     fontSize: '1.5rem',
   };
 
   return (
-    <header>
-      <h1 className="text-center mt-4" style={style}>
+    <header className='header'>
+      <h1 className='text-center mt-4' style={style}>
         Expense Tracker
       </h1>
+
+      <ExpenseInfo />
     </header>
   );
 }
