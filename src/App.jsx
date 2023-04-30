@@ -1,15 +1,14 @@
-import Layout from './components/layout/Layout';
-import ExpenseInfo from './components/ExpenseInfo';
+import Header from './components/Header';
 import TransactionList from './components/TransactionList';
-import NewTransaction from './components/NewTransaction';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <Layout>
-      <ExpenseInfo />
+    <main className='container'>
+      <Header />
       <TransactionList />
-      <NewTransaction />
-    </Layout>
+      <Footer />
+    </main>
   );
 }
 
