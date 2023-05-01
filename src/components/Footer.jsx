@@ -1,12 +1,15 @@
-import NewTransaction from './NewTransaction';
+import './Footer.css';
 
-function Footer() {
+function Footer({ handleToggleModal }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer>
-      <NewTransaction />
-      <p className='text-center'>All rights reserved {year}.</p>
+    <footer className='footer'>
+      <button className='btn' onClick={() => handleToggleModal()}>
+        Add New Transaction
+      </button>
+
+      <p style={{ textAlign: 'center' }}>All rights reserved {year}</p>
     </footer>
   );
 }
