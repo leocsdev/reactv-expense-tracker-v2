@@ -2,6 +2,7 @@
   "transactions": [
     {
       "id": 1,
+      "date": "2023-04-29",
       "transactionType": "expense",
       "transactionName": "Transaction 1",
       "amount": 200.0,
@@ -9,6 +10,7 @@
     },
     {
       "id": 2,
+      "date": "2023-04-30",
       "transactionType": "expense",
       "transactionName": "Transaction 2",
       "amount": 100.0,
@@ -16,10 +18,19 @@
     },
     {
       "id": 3,
+      "date": "2023-05-01",
       "transactionType": "expense",
       "transactionName": "Transaction 3",
-      "amount": -100.0,
+      "amount": 100.0,
       "category": "electric bill"
+    },
+    {
+      "id": 4,
+      "date": "2023-05-01",
+      "transactionType": "income",
+      "transactionName": "Transaction 4",
+      "amount": 500.0,
+      "category": "regular work"
     }
   ]
 }
