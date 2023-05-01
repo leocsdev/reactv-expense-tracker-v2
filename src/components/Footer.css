@@ -1,0 +1,14 @@
+.footer {
+  margin-top: 30px;
+}
+
+.footer .btn {
+  background-color: transparent;
+  padding: 12px 40px;
+  cursor: pointer;
+  border: 3px solid #d3e8e6;
+  color: #ddd;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+}
