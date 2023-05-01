@@ -28,7 +28,9 @@ function TransactionItem({ transaction }) {
         </div>
         <div className='transaction-name'>{transactionName}</div>
       </div>
-      <div className='amount-info'>{amount}</div>
+      <div className='amount-info'>
+        {transactionType === 'expense' ? -amount : amount}
+      </div>
     </>
   );
 }
