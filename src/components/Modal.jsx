@@ -2,8 +2,13 @@ import './Modal.css';
 
 function Modal({ children, handleToggleModal }) {
   return (
-    <div className='modal-backdrop' onClick={() => handleToggleModal()}>
-      <div className='modal'>{children}</div>
+    <div className='modal-backdrop'>
+      <div className='modal'>
+        {children}
+        <button className='btn' onClick={() => handleToggleModal()}>
+          cancel
+        </button>
+      </div>
     </div>
   );
 }

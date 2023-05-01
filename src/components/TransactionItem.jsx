@@ -2,8 +2,7 @@ import './TransactionItem.css';
 import moment from 'moment';
 
 function TransactionItem({ transaction }) {
-  const { date, transactionType, transactionName, amount, category } =
-    transaction;
+  const { date, transactionType, transactionName, amount } = transaction;
   const formattedDate = moment(date);
 
   return (
@@ -24,8 +23,15 @@ function TransactionItem({ transaction }) {
       </div>
       <div className='transaction-container'>
         <div className='transaction-info'>
-          <span className='transaction-type'>{transactionType}</span>
-          <span className='category'>{category}</span>
+          <span
+            className={`badge ${
+              transactionType === 'expense'
+                ? 'badge--primary'
+                : 'badge--secondary'
+            }`}
+          >
+            {transactionType}
+          </span>
         </div>
         <div className='transaction-name'>{transactionName}</div>
       </div>

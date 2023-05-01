@@ -37,3 +37,9 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}

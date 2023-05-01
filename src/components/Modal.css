@@ -17,4 +17,13 @@
   background-color: #fff;
   border-radius: 10px;
   width: 380px;
+  position: relative;
+}
+
+.modal .btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin-bottom: 10px;
+  color: rgb(182, 55, 55);
 }

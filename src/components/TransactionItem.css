@@ -18,18 +18,18 @@
   margin-bottom: 5px;
 }
 
-.transaction-list .transaction-type {
-  background-color: #292c31;
-  padding: 0 10px;
+.transaction-list .badge {
+  padding: 0 10px 3px;
   border-radius: 100px;
   font-size: 0.75rem;
 }
 
-.transaction-list .category {
-  background-color: #334d7a;
-  padding: 0 10px;
-  border-radius: 100px;
-  font-size: 0.75rem;
+.transaction-list .badge--primary {
+  background-color: #d85d3e;
+}
+
+.transaction-list .badge--secondary {
+  background-color: #318d71;
 }
 
 .transaction-list .amount-info {
