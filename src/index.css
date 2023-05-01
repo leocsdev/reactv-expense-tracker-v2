@@ -50,7 +50,8 @@ body {
 }
 
 .transaction-list .list-item {
-  height: 70px;
+  min-height: 70px;
   background-color: #37393f;
   margin-bottom: 8px;
+  padding: 10px;
 }

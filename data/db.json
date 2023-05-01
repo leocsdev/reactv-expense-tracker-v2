@@ -1,0 +1,25 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "transactionType": "expense",
+      "transactionName": "Transaction 1",
+      "amount": 200.0,
+      "category": "grocery"
+    },
+    {
+      "id": 2,
+      "transactionType": "expense",
+      "transactionName": "Transaction 2",
+      "amount": 100.0,
+      "category": "electric bill"
+    },
+    {
+      "id": 3,
+      "transactionType": "expense",
+      "transactionName": "Transaction 3",
+      "amount": -100.0,
+      "category": "electric bill"
+    }
+  ]
+}

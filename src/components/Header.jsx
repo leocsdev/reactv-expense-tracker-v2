@@ -1,6 +1,6 @@
 import ExpenseInfo from './ExpenseInfo';
 
-function Header() {
+function Header({ transactions }) {
   const style = {
     fontSize: '1.5rem',
   };
@@ -11,7 +11,7 @@ function Header() {
         Expense Tracker
       </h1>
 
-      <ExpenseInfo />
+      <ExpenseInfo transactions={transactions} />
     </header>
   );
 }
