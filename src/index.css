@@ -23,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #d3e8e6;
 }
 
 .container {
@@ -31,75 +32,8 @@ body {
   height: 85vh;
   margin: 0 auto;
   border-radius: 20px;
-  color: #d3e8e6;
   padding: 20px 15px;
 
   display: grid;
   grid-template-rows: auto 1fr auto;
-}
-
-.header {
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #4f5257;
-}
-
-.transaction-list {
-  list-style-type: none;
-  overflow-y: auto;
-}
-
-.transaction-list .list-item {
-  min-height: 70px;
-  background-color: #37393f;
-  margin-bottom: 8px;
-  padding: 10px;
-  display: grid;
-
-  grid-template-columns: auto 1fr auto;
-}
-
-.transaction-list .date-info {
-  min-width: 50px;
-  border-right: 1px solid #4f5257;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-right: 5px;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-}
-
-.transaction-list .transaction-container {
-  padding: 0 10px;
-}
-
-.transaction-list .transaction-info {
-  margin-bottom: 5px;
-}
-
-.transaction-list .transaction-type {
-  background-color: #292c31;
-  padding: 0 10px;
-  border-radius: 100px;
-  font-size: 0.75rem;
-}
-
-.transaction-list .category {
-  /* background-color: #292c31; */
-  background-color: #334d7a;
-  padding: 0 10px;
-  border-radius: 100px;
-  font-size: 0.75rem;
-}
-
-.transaction-list .amount-info {
-  padding: 5px;
-  min-width: 50px;
-  font-size: 1.25rem;
-  font-weight: 500;
-  justify-content: flex-end;
-  display: flex;
-  align-items: center;
 }

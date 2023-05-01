@@ -1,3 +1,4 @@
+import './TransactionItem.css';
 import moment from 'moment';
 
 function TransactionItem({ transaction }) {

@@ -1,0 +1,14 @@
+.transaction-list {
+  list-style-type: none;
+  overflow-y: auto;
+}
+
+.transaction-list .list-item {
+  min-height: 70px;
+  background-color: #37393f;
+  margin-bottom: 8px;
+  padding: 10px;
+  display: grid;
+
+  grid-template-columns: auto 1fr auto;
+}

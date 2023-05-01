@@ -1,3 +1,5 @@
+import './TransactionList.css';
+
 import TransactionItem from './TransactionItem';
 
 function TransactionList({ transactions }) {

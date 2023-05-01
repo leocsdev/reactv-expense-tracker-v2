@@ -4,32 +4,32 @@
       "id": 1,
       "date": "2023-04-29",
       "transactionType": "expense",
-      "transactionName": "Transaction 1",
-      "amount": 200.0,
+      "transactionName": "Grocery for 1 week",
+      "amount": 1800.0,
       "category": "grocery"
     },
     {
       "id": 2,
       "date": "2023-04-30",
       "transactionType": "expense",
-      "transactionName": "Transaction 2",
-      "amount": 100.0,
-      "category": "electric bill"
+      "transactionName": "Meralco.",
+      "amount": 1500.0,
+      "category": "bill"
     },
     {
       "id": 3,
       "date": "2023-05-01",
       "transactionType": "expense",
-      "transactionName": "Transaction 3",
-      "amount": 100.0,
-      "category": "electric bill"
+      "transactionName": "Converge",
+      "amount": 1500.0,
+      "category": "bill"
     },
     {
       "id": 4,
       "date": "2023-05-01",
       "transactionType": "income",
-      "transactionName": "Transaction 4",
-      "amount": 500.0,
+      "transactionName": "April salary",
+      "amount": 25000.0,
       "category": "regular work"
     }
   ]
