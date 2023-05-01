@@ -1,5 +1,6 @@
-import './TransactionItem.css';
 import moment from 'moment';
+import { currencyFormat } from '../utils/utils';
+import './TransactionItem.css';
 
 function TransactionItem({ transaction }) {
   const { date, transactionType, transactionName, amount } = transaction;
@@ -36,7 +37,9 @@ function TransactionItem({ transaction }) {
         <div className='transaction-name'>{transactionName}</div>
       </div>
       <div className='amount-info'>
-        {transactionType === 'expense' ? -amount : amount}
+        {transactionType === 'expense'
+          ? currencyFormat(-amount)
+          : currencyFormat(amount)}
       </div>
     </>
   );

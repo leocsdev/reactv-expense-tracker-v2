@@ -33,11 +33,14 @@
 }
 
 .transaction-list .amount-info {
-  padding: 5px;
+  margin-left: 10px;
   min-width: 50px;
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 700;
   justify-content: flex-end;
   display: flex;
   align-items: center;
+}
+
+.transaction-list .transaction-name {
+  font-size: 0.85rem;
 }

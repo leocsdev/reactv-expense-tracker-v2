@@ -1,17 +1,21 @@
 import { useState } from 'react';
+import moment from 'moment';
 import './AddTransactionForm.css';
 
 function AddTransactionForm({ handleAddTransaction }) {
-  const [date, setDate] = useState('');
+  // Get the current date and set the date to date state
+  const dateNow = moment().format('YYYY-MM-DD');
+
+  const [date, setDate] = useState(dateNow);
   const [transactionType, setTransactionType] = useState('expense');
   const [transactionName, setTransactionName] = useState('');
-  const [amount, setAmount] = useState(0.0);
+  const [amount, setAmount] = useState('0.0');
 
   const resetForm = () => {
     setDate('');
     setTransactionType('');
     setTransactionName('');
-    setAmount(0.0);
+    setAmount('0.0');
   };
 
   const handleSubmit = (e) => {
@@ -27,7 +31,6 @@ function AddTransactionForm({ handleAddTransaction }) {
     };
 
     handleAddTransaction(transaction);
-    // reset form
     resetForm();
   };
 
