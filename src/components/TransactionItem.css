@@ -18,26 +18,29 @@
   margin-bottom: 5px;
 }
 
-.transaction-list .transaction-type {
-  background-color: #292c31;
-  padding: 0 10px;
+.transaction-list .badge {
+  padding: 0 10px 3px;
   border-radius: 100px;
   font-size: 0.75rem;
 }
 
-.transaction-list .category {
-  background-color: #334d7a;
-  padding: 0 10px;
-  border-radius: 100px;
-  font-size: 0.75rem;
+.transaction-list .badge--primary {
+  background-color: #d85d3e;
+}
+
+.transaction-list .badge--secondary {
+  background-color: #318d71;
 }
 
 .transaction-list .amount-info {
-  padding: 5px;
+  margin-left: 10px;
   min-width: 50px;
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 700;
   justify-content: flex-end;
   display: flex;
   align-items: center;
+}
+
+.transaction-list .transaction-name {
+  font-size: 0.85rem;
 }

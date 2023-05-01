@@ -1,8 +1,6 @@
-function ExpenseInfo({ transactions }) {
-  // const totalTransactionsAmount = transactions.reduce((total, transaction) => {
-  //   return total + transaction.amount;
-  // }, 0);
+import { currencyFormat } from '../utils/utils';
 
+function ExpenseInfo({ transactions }) {
   const totalExpenses = transactions
     .filter((transaction) => {
       return transaction.transactionType === 'expense';
@@ -21,9 +19,9 @@ function ExpenseInfo({ transactions }) {
 
   return (
     <div>
-      <h2>Balance: {totalIncome - totalExpenses}</h2>
-      <h3>Income: {totalIncome}</h3>
-      <h3>Expenses: {totalExpenses}</h3>
+      <h2>Balance: {currencyFormat(totalIncome - totalExpenses)}</h2>
+      <h3>Income: {currencyFormat(totalIncome)}</h3>
+      <h3>Expenses: {currencyFormat(totalExpenses)}</h3>
     </div>
   );
 }

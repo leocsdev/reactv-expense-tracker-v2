@@ -13,14 +13,14 @@ function App() {
     setShowModal(!showModal);
   };
 
-  const addTransaction = (transaction) => {
+  const handleAddTransaction = (transaction) => {
     // Add new transaction
     setTransactions((currentTransactions) => [
-      transactions,
+      transaction,
       ...currentTransactions,
     ]);
 
-    // Close the modal after
+    // Close the modal
     handleToggleModal();
   };
 
@@ -45,7 +45,7 @@ function App() {
 
       {showModal && (
         <Modal handleToggleModal={handleToggleModal}>
-          <AddTransactionForm />
+          <AddTransactionForm handleAddTransaction={handleAddTransaction} />
         </Modal>
       )}
     </main>

@@ -5,32 +5,28 @@
       "date": "2023-04-29",
       "transactionType": "expense",
       "transactionName": "Grocery for 1 week",
-      "amount": 1800.0,
-      "category": "grocery"
+      "amount": 1800.0
     },
     {
       "id": 2,
       "date": "2023-04-30",
       "transactionType": "expense",
       "transactionName": "Meralco.",
-      "amount": 1500.0,
-      "category": "bill"
+      "amount": 1500.0
     },
     {
       "id": 3,
       "date": "2023-05-01",
       "transactionType": "expense",
       "transactionName": "Converge",
-      "amount": 1500.0,
-      "category": "bill"
+      "amount": 1500.0
     },
     {
       "id": 4,
       "date": "2023-05-01",
       "transactionType": "income",
       "transactionName": "April salary",
-      "amount": 25000.0,
-      "category": "regular work"
+      "amount": 25000.0
     }
   ]
 }
