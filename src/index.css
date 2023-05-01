@@ -54,4 +54,54 @@ body {
   background-color: #37393f;
   margin-bottom: 8px;
   padding: 10px;
+  display: grid;
+
+  grid-template-columns: auto 1fr auto;
+}
+
+.transaction-list .date-info {
+  min-width: 50px;
+  /* background-color: green; */
+  border-right: 1px solid #4f5257;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.transaction-list .transaction-container {
+  padding: 0 10px;
+  /* background-color: blue; */
+}
+
+.transaction-list .transaction-info {
+  margin-bottom: 5px;
+}
+
+.transaction-list .category {
+  background-color: #292c31;
+  padding: 0 10px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+}
+
+.transaction-list .transaction-type {
+  background-color: #292c31;
+  padding: 0 10px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+}
+
+.transaction-list .amount-info {
+  /* background-color: red; */
+  padding: 5px;
+  min-width: 50px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
 }
