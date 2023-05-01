@@ -3,7 +3,6 @@ function ExpenseInfo({ transactions }) {
     return total + transaction.amount;
   }, 0);
 
-  console.log(totalTransactionsAmount);
   return (
     <div>
       <h3>Expenses: {totalTransactionsAmount}</h3>
