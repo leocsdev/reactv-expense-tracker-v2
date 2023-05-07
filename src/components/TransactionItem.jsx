@@ -11,7 +11,11 @@ import './TransactionItem.css';
 import Modal from './Modal';
 import TransactionForm from './TransactionForm';
 
-function TransactionItem({ transaction, handleUpdateTransaction }) {
+function TransactionItem({
+  transaction,
+  handleUpdateTransaction,
+  handleDeleteTransaction,
+}) {
   const { date, transactionType, transactionName, amount } = transaction;
   const formattedDate = moment(date);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
@@ -64,6 +68,7 @@ function TransactionItem({ transaction, handleUpdateTransaction }) {
           <TransactionForm
             handleTransaction={handleUpdateTransaction}
             transaction={transaction}
+            handleDeleteTransaction={handleDeleteTransaction}
             edit={true}
             setModal={setShowUpdateModal}
           />

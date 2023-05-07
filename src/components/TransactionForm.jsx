@@ -2,7 +2,13 @@ import { useEffect, useState } from 'react';
 import moment from 'moment';
 import './TransactionForm.css';
 
-function TransactionForm({ handleTransaction, setModal, edit, transaction }) {
+function TransactionForm({
+  handleTransaction,
+  setModal,
+  edit,
+  transaction,
+  handleDeleteTransaction,
+}) {
   // Get the current date and set the date to date state
   const dateNow = moment().format('YYYY-MM-DD');
 
@@ -68,45 +74,56 @@ function TransactionForm({ handleTransaction, setModal, edit, transaction }) {
   };
 
   return (
-    <form className='new-transaction-form' onSubmit={handleSubmit}>
-      <label>
-        <span>Date</span>
-        <input
-          type='date'
-          onChange={(e) => setDate(e.target.value)}
-          value={date}
-        />
-      </label>
-      <label>
-        <span>Type</span>
-        <select
-          defaultValue={transactionType}
-          onChange={(e) => setTransactionType(e.target.value)}
-        >
-          <option value='expense'>Expense</option>
-          <option value='income'>Income</option>
-        </select>
-      </label>
-      <label>
-        <span>Description</span>
-        <input
-          type='text'
-          onChange={(e) => setTransactionName(e.target.value)}
-          value={transactionName}
-        />
-      </label>
-      <label>
-        <span>Amount</span>
-        <input
-          type='number'
-          onChange={(e) => setAmount(e.target.value)}
-          value={amount}
-        />
-      </label>
-      <button className='add-btn'>
-        {edit ? 'Update Transaction' : 'Add Transaction'}
-      </button>
-    </form>
+    <>
+      <form className='new-transaction-form' onSubmit={handleSubmit}>
+        <label>
+          <span>Date</span>
+          <input
+            type='date'
+            onChange={(e) => setDate(e.target.value)}
+            value={date}
+          />
+        </label>
+        <label>
+          <span>Type</span>
+          <select
+            defaultValue={transactionType}
+            onChange={(e) => setTransactionType(e.target.value)}
+          >
+            <option value='expense'>Expense</option>
+            <option value='income'>Income</option>
+          </select>
+        </label>
+        <label>
+          <span>Description</span>
+          <input
+            type='text'
+            onChange={(e) => setTransactionName(e.target.value)}
+            value={transactionName}
+          />
+        </label>
+        <label>
+          <span>Amount</span>
+          <input
+            type='number'
+            onChange={(e) => setAmount(e.target.value)}
+            value={amount}
+          />
+        </label>
+        <button className='add-btn'>
+          {transactionToEdit.edit ? 'Update Transaction' : 'Add Transaction'}
+        </button>
+      </form>
+
+      {
+        // Show the delete button only if updating transaction
+        transactionToEdit.edit && (
+          <button onClick={() => handleDeleteTransaction(transaction.id)}>
+            Delete Transaction
+          </button>
+        )
+      }
+    </>
   );
 }
 

@@ -32,6 +32,14 @@ function App() {
     );
   };
 
+  const handleDeleteTransaction = (id) => {
+    if (window.confirm('Are you sure you want to delete this transaction?')) {
+      setTransactions(
+        transactions.filter((transaction) => transaction.id !== id)
+      );
+    }
+  };
+
   useEffect(() => {
     const fetchTransactions = async () => {
       // Fetch transactions data from the server
@@ -50,6 +58,7 @@ function App() {
       <TransactionList
         transactions={transactions}
         handleUpdateTransaction={handleUpdateTransaction}
+        handleDeleteTransaction={handleDeleteTransaction}
       />
 
       <button className='new-btn' onClick={() => setShowModal((prev) => !prev)}>

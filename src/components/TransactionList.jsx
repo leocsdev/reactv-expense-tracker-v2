@@ -2,7 +2,11 @@ import './TransactionList.css';
 
 import TransactionItem from './TransactionItem';
 
-function TransactionList({ transactions, handleUpdateTransaction }) {
+function TransactionList({
+  transactions,
+  handleUpdateTransaction,
+  handleDeleteTransaction,
+}) {
   return (
     <ul className='transaction-list'>
       {transactions.map((transaction) => (
@@ -10,6 +14,7 @@ function TransactionList({ transactions, handleUpdateTransaction }) {
           transaction={transaction}
           key={transaction.id}
           handleUpdateTransaction={handleUpdateTransaction}
+          handleDeleteTransaction={handleDeleteTransaction}
         />
       ))}
     </ul>
