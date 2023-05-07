@@ -7,7 +7,7 @@ function TransactionItem({ transaction }) {
   const formattedDate = moment(date);
 
   return (
-    <>
+    <li className='list-item'>
       <div className='date-info'>
         <span>
           {
@@ -41,7 +41,7 @@ function TransactionItem({ transaction }) {
           ? currencyFormat(-amount)
           : currencyFormat(amount)}
       </div>
-    </>
+    </li>
   );
 }
 

@@ -6,9 +6,7 @@ function TransactionList({ transactions }) {
   return (
     <ul className='transaction-list'>
       {transactions.map((transaction) => (
-        <li key={transaction.id} className='list-item'>
-          <TransactionItem transaction={transaction} />
-        </li>
+        <TransactionItem transaction={transaction} key={transaction.id} />
       ))}
     </ul>
   );

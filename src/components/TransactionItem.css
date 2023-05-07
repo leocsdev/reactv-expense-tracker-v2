@@ -1,3 +1,18 @@
+.transaction-list .list-item {
+  min-height: 70px;
+  background-color: #37393f;
+  margin-bottom: 8px;
+  padding: 10px;
+  display: grid;
+
+  grid-template-columns: auto 1fr auto;
+  cursor: pointer;
+}
+
+.transaction-list .list-item:hover {
+  background-color: #4b4d55;
+}
+
 .transaction-list .date-info {
   min-width: 50px;
   border-right: 1px solid #4f5257;
