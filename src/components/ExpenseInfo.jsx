@@ -1,3 +1,4 @@
+// helpers
 import { currencyFormat } from '../utils/utils';
 
 function ExpenseInfo({ transactions }) {

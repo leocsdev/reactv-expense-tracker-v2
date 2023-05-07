@@ -2,13 +2,20 @@ import './TransactionList.css';
 
 import TransactionItem from './TransactionItem';
 
-function TransactionList({ transactions }) {
+function TransactionList({
+  transactions,
+  handleUpdateTransaction,
+  handleDeleteTransaction,
+}) {
   return (
     <ul className='transaction-list'>
       {transactions.map((transaction) => (
-        <li key={transaction.id} className='list-item'>
-          <TransactionItem transaction={transaction} />
-        </li>
+        <TransactionItem
+          transaction={transaction}
+          key={transaction.id}
+          handleUpdateTransaction={handleUpdateTransaction}
+          handleDeleteTransaction={handleDeleteTransaction}
+        />
       ))}
     </ul>
   );

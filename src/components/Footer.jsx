@@ -1,15 +1,11 @@
 import './Footer.css';
 
-function Footer({ handleToggleModal }) {
+function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className='footer'>
-      <button className='btn' onClick={() => handleToggleModal()}>
-        Add New Transaction
-      </button>
-
-      <p style={{ textAlign: 'center' }}>All rights reserved {year}</p>
+      <p>All rights reserved {year}</p>
     </footer>
   );
 }
