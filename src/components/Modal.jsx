@@ -1,11 +1,11 @@
 import './Modal.css';
 
-function Modal({ children, handleToggleModal }) {
+function Modal({ children, setModal }) {
   return (
     <div className='modal-backdrop'>
       <div className='modal'>
         {children}
-        <button className='btn' onClick={() => handleToggleModal()}>
+        <button className='btn' onClick={() => setModal((prev) => !prev)}>
           cancel
         </button>
       </div>

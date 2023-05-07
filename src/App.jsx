@@ -1,17 +1,18 @@
 import { useState, useEffect } from 'react';
+
+// style
+import './App.css';
+
+// components
 import Header from './components/Header';
 import TransactionList from './components/TransactionList';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
-import AddTransactionForm from './components/AddTransactionForm';
+import TransactionForm from './components/TransactionForm';
 
 function App() {
   const [transactions, setTransactions] = useState([]);
   const [showModal, setShowModal] = useState(false);
-
-  const handleToggleModal = () => {
-    setShowModal(!showModal);
-  };
 
   const handleAddTransaction = (transaction) => {
     // Add new transaction
@@ -19,9 +20,16 @@ function App() {
       transaction,
       ...currentTransactions,
     ]);
+  };
 
-    // Close the modal
-    handleToggleModal();
+  const handleUpdateTransaction = (id, updatedTransaction) => {
+    setTransactions(
+      transactions.map((transaction) =>
+        transaction.id === id
+          ? { ...transaction, ...updatedTransaction }
+          : transaction
+      )
+    );
   };
 
   useEffect(() => {
@@ -37,15 +45,25 @@ function App() {
   }, []);
 
   return (
-    <main className='container'>
+    <main className='app-container'>
       <Header transactions={transactions} />
-      <TransactionList transactions={transactions} />
-      {/* Footer component has the Add New Transaction button */}
-      <Footer handleToggleModal={handleToggleModal} />
+      <TransactionList
+        transactions={transactions}
+        handleUpdateTransaction={handleUpdateTransaction}
+      />
+
+      <button className='new-btn' onClick={() => setShowModal((prev) => !prev)}>
+        Add New Transaction
+      </button>
+
+      <Footer />
 
       {showModal && (
-        <Modal handleToggleModal={handleToggleModal}>
-          <AddTransactionForm handleAddTransaction={handleAddTransaction} />
+        <Modal setModal={setShowModal}>
+          <TransactionForm
+            handleTransaction={handleAddTransaction}
+            setModal={setShowModal}
+          />
         </Modal>
       )}
     </main>
