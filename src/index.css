@@ -26,18 +26,6 @@ body {
   color: #d3e8e6;
 }
 
-.container {
-  max-width: 400px;
-  background-color: #202226;
-  height: 85vh;
-  margin: 0 auto;
-  border-radius: 20px;
-  padding: 20px 15px;
-
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
 button {
   background-color: transparent;
   cursor: pointer;
