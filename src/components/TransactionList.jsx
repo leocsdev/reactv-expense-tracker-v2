@@ -1,21 +1,21 @@
+import { useContext } from 'react';
+
+// style
 import './TransactionList.css';
 
+// context
+import TransactionContext from '../context/TransactionContext';
+
+// components
 import TransactionItem from './TransactionItem';
 
-function TransactionList({
-  transactions,
-  handleUpdateTransaction,
-  handleDeleteTransaction,
-}) {
+function TransactionList() {
+  const { transactions } = useContext(TransactionContext);
+
   return (
     <ul className='transaction-list'>
       {transactions.map((transaction) => (
-        <TransactionItem
-          transaction={transaction}
-          key={transaction.id}
-          handleUpdateTransaction={handleUpdateTransaction}
-          handleDeleteTransaction={handleDeleteTransaction}
-        />
+        <TransactionItem transaction={transaction} key={transaction.id} />
       ))}
     </ul>
   );
