@@ -28,7 +28,9 @@ export function TransactionProvider({ children }) {
   // Delete transaction
 
   return (
-    <TransactionContext.Provider value={{ transactions }}>
+    <TransactionContext.Provider
+      value={{ transactions, showModal, setShowModal }}
+    >
       {children}
     </TransactionContext.Provider>
   );
