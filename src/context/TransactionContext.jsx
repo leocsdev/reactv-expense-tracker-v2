@@ -9,6 +9,11 @@ export function TransactionProvider({ children }) {
   // Transaction form modal state
   const [showModal, setShowModal] = useState(false);
 
+  // const [transactionToEdit, setTransactionToEdit] = useState({
+  //   edit,
+  //   transaction,
+  // });
+
   useEffect(() => {
     const fetchTransactions = async () => {
       // Fetch transactions data from the server
@@ -22,6 +27,12 @@ export function TransactionProvider({ children }) {
   }, []);
 
   // Add transaction
+  const handleAddTransaction = (transaction) => {
+    setTransactions((currentTransactions) => [
+      transaction,
+      ...currentTransactions,
+    ]);
+  };
 
   // Edit/Update transaction
 
@@ -29,7 +40,7 @@ export function TransactionProvider({ children }) {
 
   return (
     <TransactionContext.Provider
-      value={{ transactions, showModal, setShowModal }}
+      value={{ transactions, showModal, setShowModal, handleAddTransaction }}
     >
       {children}
     </TransactionContext.Provider>
