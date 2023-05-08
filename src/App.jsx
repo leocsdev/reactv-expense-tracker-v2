@@ -1,7 +1,11 @@
 // import { useState, useEffect } from 'react';
+import { useContext } from 'react';
 
 // style
 import './App.css';
+
+// context
+import TransactionContext from './context/TransactionContext';
 
 // components
 import Header from './components/Header';
@@ -9,15 +13,27 @@ import TransactionList from './components/TransactionList';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
 import TransactionForm from './components/TransactionForm';
-import { TransactionProvider } from './context/TransactionContext';
 
 function App() {
+  const { showModal, setShowModal } = useContext(TransactionContext);
+
   return (
-    <TransactionProvider>
-      <main className='app-container'>
-        <Header />
-      </main>
-    </TransactionProvider>
+    <main className='app-container'>
+      <Header />
+
+      <TransactionList />
+      <button className='new-btn' onClick={() => setShowModal(!showModal)}>
+        Add New Transaction
+      </button>
+
+      <Footer />
+
+      {showModal && (
+        <Modal>
+          <TransactionForm />
+        </Modal>
+      )}
+    </main>
   );
 
   // const [transactions, setTransactions] = useState([]);
