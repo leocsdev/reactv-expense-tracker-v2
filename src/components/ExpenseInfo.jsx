@@ -1,7 +1,14 @@
+import { useContext } from 'react';
+
+// context
+import TransactionContext from '../context/TransactionContext';
+
 // helpers
 import { currencyFormat } from '../utils/utils';
 
-function ExpenseInfo({ transactions }) {
+function ExpenseInfo() {
+  const { transactions } = useContext(TransactionContext);
+
   const totalExpenses = transactions
     .filter((transaction) => {
       return transaction.transactionType === 'expense';
